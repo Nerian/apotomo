@@ -47,6 +47,7 @@ module Apotomo
       def replace(id, markup);    element(id) + '.replaceWith("'+escape(markup)+'");'; end
       def update_id(id, markup);  update("##{id}", markup); end
       def replace_id(id, markup); replace("##{id}", markup); end
+      def redirect_to(url);       "window.location.replace('#{url}');" end
     end
   end
 end
