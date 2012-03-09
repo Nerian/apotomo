@@ -36,7 +36,7 @@ module Apotomo
     end
     
     def redirect_to(url)
-      wrap_in_javascript_for(:redirect_to, url)
+      escape_js("window.location.replace('#{url}');")
     end
     
   private
