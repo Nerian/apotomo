@@ -35,6 +35,10 @@ module Apotomo
       wrap_in_javascript_for(:update, *args)
     end
     
+    def redirect_to(url)
+      wrap_in_javascript_for(:redirect_to, url)
+    end
+    
   private
     def wrap_in_javascript_for(mode, *args)
       selector  = args.first.is_a?(String) ? args.shift : false
