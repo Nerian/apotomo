@@ -36,7 +36,7 @@ module Apotomo
     end
     
     def redirect_to(url)
-      "window.location.replace('#{url}');"
+      render :text => "window.location.replace(\"#{url}\");"
     end
     
   private
