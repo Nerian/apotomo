@@ -36,7 +36,7 @@ module Apotomo
     end
     
     def redirect_to(url)
-      escape_js("window.location.replace(\"#{url}\");")
+      "window.location.replace('#{url}');"
     end
     
   private
